@@ -1,38 +1,120 @@
-.App {
+.name-container {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  margin-bottom: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  height: 100%;
 }
 
-.App-link {
-  color: #61dafb;
+.name {
+  font-size: 48px;
+  font-weight: bold;
+  cursor: pointer;
+  opacity: 0;
+  animation: appear 3s forwards;
+  padding: 50px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.name:hover {
+  color: red;
+  border: 2px solid red;
+  background-color: lightgray;
+  transition: border 0.5s, background-color 0.5s;
+  padding: 50px;
+}
+
+.details {
+  font-size: 30px;
+  cursor: pointer;
+  opacity: 0;
+  animation: appear 3s forwards;
+  padding: 50px;
+}
+
+.details:hover {
+  color: rgb(245, 40, 68);
+  border: 2px solid rgb(236, 100, 59);
+  transition: border 0.5s;
+  padding: 50px;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+.image-container {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.rounded-image {
+  border-radius: 50%;
+  max-width: 100%;
+  height: auto;
+}
+
+.details-container {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
   }
-  to {
-    transform: rotate(360deg);
+  100% {
+    opacity: 1;
   }
+}
+.about-section {
+  padding: 50px;
+  background-color: #f8f8f8;
+}
+
+.profile-picture {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.name {
+  font-size: 36px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.introduction {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-top: 20px;
+}
+
+.details-section {
+  margin-top: 40px;
+}
+
+.details-heading {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.details-list {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.details-label {
+  font-weight: bold;
+  margin-right: 10px;
 }
